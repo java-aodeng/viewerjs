@@ -1,6 +1,7 @@
-## 使用笔记
+## 个人使用笔记
 
 核行代码很简单
+这种方式已经可以直接实现，不需要写js
  ```
     <link rel="stylesheet" href="https://unpkg.com/viewerjs/dist/viewer.css" crossorigin="anonymous">
   
@@ -14,17 +15,24 @@
   <script src="js/jquery-viewer.js"></script>
   <script src="js/main.js"></script>
  ```
+ 
+ 但是有时候发生页面元素加载顺序导致的问题，必须写个js手动触发（如：bootstrap table init里面列图片的时候）
+ 
  html代码
  ```
  <!-- 单张图片 -->
 <div>
+<a href="javascript:(imglayeropen(image))">
 <img id="image" data-original="img/viewer1.jpg" src="img/viewer1.jpg" alt="图片1">
+</a>
 </div>
  ```
  
- jQuery 中使用
- 
-$('#image').viewer({ url: 'data-original' }); $('#viewer').viewer({ url: 'data-original' });
+ jQuery 中使用，写个点击方法，里面手动触发
+    /**图片点击放大**/
+    function imglayeropen(id) {
+        $('#'+id).viewer({ url: 'data-original' }); $('#viewer').viewer({ url: 'data-original' });
+    }
 
 
 
