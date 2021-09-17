@@ -1,7 +1,6 @@
-## 个人使用笔记
+## 低调小熊猫使用笔记
 
-核行代码很简单
-这种方式已经可以直接实现,项目导入必须的插件，然后页面class定义好即可
+核心代码
  ```js
     <link rel="stylesheet" href="https://unpkg.com/viewerjs/dist/viewer.css" crossorigin="anonymous">
   
@@ -16,7 +15,9 @@
   <script src="js/main.js"></script>
  ```
  
- 页面元素加载顺序导致未初始化定义的时候，必须写个js手动触发（如：bootstrap table init里面列图片的时候）
+ 未初始化导致失效的解决方法：
+ 
+ 写个点击方法，里面手动触发
  
  html代码
  ```js
@@ -28,7 +29,7 @@
 </div>
  ```
  
- jQuery 中使用，写个点击方法，里面手动触发
+ js代码
 ```js    
     function imglayeropen(id) {
         $('#'+id).viewer({ url: 'data-original' }); $('#viewer').viewer({ url: 'data-original' });
