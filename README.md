@@ -1,7 +1,7 @@
 ## 个人使用笔记
 
 核行代码很简单
-这种方式已经可以直接实现，不需要写js
+这种方式已经可以直接实现,项目导入必须的插件，然后页面class定义好即可
  ```js
     <link rel="stylesheet" href="https://unpkg.com/viewerjs/dist/viewer.css" crossorigin="anonymous">
   
@@ -16,7 +16,7 @@
   <script src="js/main.js"></script>
  ```
  
- 但是有时候发生页面元素加载顺序导致的问题，必须写个js手动触发（如：bootstrap table init里面列图片的时候）
+ 页面元素加载顺序导致未初始化定义的时候，必须写个js手动触发（如：bootstrap table init里面列图片的时候）
  
  html代码
  ```js
