@@ -1,4 +1,35 @@
+## 使用笔记
+
+核行代码很简单
+ ```
+    <link rel="stylesheet" href="https://unpkg.com/viewerjs/dist/viewer.css" crossorigin="anonymous">
+  
+
+    <div class="docs-pictures">
+    <img data-original="images/tibet-1.jpg" src="images/thumbnails/tibet-1.jpg" alt="Cuo Na Lake">
+  </div>        
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/viewerjs/dist/viewer.js" crossorigin="anonymous"></script>
+  <script src="js/jquery-viewer.js"></script>
+  <script src="js/main.js"></script>
+ ```
+ html代码
+ ```
+ <!-- 单张图片 -->
+<div>
+<img id="image" data-original="img/viewer1.jpg" src="img/viewer1.jpg" alt="图片1">
+</div>
+ ```
+ 
+ jQuery 中使用
+ 
+$('#image').viewer({ url: 'data-original' }); $('#viewer').viewer({ url: 'data-original' });
+
+
+
 # Viewer.js
+
 
 [![Downloads](https://img.shields.io/npm/dm/viewerjs.svg)](https://www.npmjs.com/package/viewerjs) [![Version](https://img.shields.io/npm/v/viewerjs.svg)](https://www.npmjs.com/package/viewerjs) [![Gzip Size](https://img.shields.io/bundlephobia/minzip/viewerjs.svg)](https://unpkg.com/viewerjs/dist/viewer.common.js) [![Dependencies](https://img.shields.io/david/fengyuanchen/viewerjs.svg)](https://www.npmjs.com/package/viewerjs)
 
