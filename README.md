@@ -2,7 +2,7 @@
 
 核行代码很简单
 这种方式已经可以直接实现，不需要写js
- ```
+ ```js
     <link rel="stylesheet" href="https://unpkg.com/viewerjs/dist/viewer.css" crossorigin="anonymous">
   
 
@@ -19,7 +19,7 @@
  但是有时候发生页面元素加载顺序导致的问题，必须写个js手动触发（如：bootstrap table init里面列图片的时候）
  
  html代码
- ```
+ ```js
  <!-- 单张图片 -->
 <div>
 <a href="javascript:(imglayeropen(image))">
@@ -29,12 +29,12 @@
  ```
  
  jQuery 中使用，写个点击方法，里面手动触发
-    /**图片点击放大**/
+```js    
     function imglayeropen(id) {
         $('#'+id).viewer({ url: 'data-original' }); $('#viewer').viewer({ url: 'data-original' });
     }
 
-
+```
 
 # Viewer.js
 
