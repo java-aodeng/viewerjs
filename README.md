@@ -32,7 +32,7 @@
  js代码
 ```js    
     function imglayeropen(id) {
-        $('#'+id).viewer({ url: 'data-original' }); $('#viewer').viewer({ url: 'data-original' });
+        $('#'+id).viewer({ url: 'data-original' });
     }
 
 ```
